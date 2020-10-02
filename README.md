@@ -44,7 +44,7 @@ La siguiente imagen muestra los servicios que esta corriendo en la maquina2 de A
 
 El reporte fue generado mediante latex, su nombre es Media y Desviacion estadar. Se encuentra en la raiz del proyecto
 
-[report](https://github.com/jnicolasct/AREP-LAB7/blob/master/Resources/Introduccion_Docker_y_AWS.pdf)
+[report](https://github.com/jnicolasct/AREP-LAB7/blob/master/Resources/Secure_Spark_APP.pdf)
 
 ## Autor
   Johan Nicolas Cortes Torres
