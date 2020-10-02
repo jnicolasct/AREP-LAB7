@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: SparkSecure/Dockerfile
+    ports:
+      - "16000:6000"
+
+  other:
+    build:
+      context: ./OtherSparkService
+      dockerfile: Dockerfile
+    ports:
+      - "17000:7000"
