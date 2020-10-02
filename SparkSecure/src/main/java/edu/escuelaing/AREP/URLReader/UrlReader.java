@@ -18,6 +18,11 @@ import javax.net.ssl.TrustManagerFactory;
 
 public class UrlReader {
 
+    /**
+     * Metodo que genera la conexion y verifica la seguridad de esta
+     * @param url la URL a la cual se le va a generar la conexion
+     * @return el string de respuesta, que cotiene una pagina html
+     */
     public static String urlprueba(String url) {
         String vista = "";
         try {
@@ -72,11 +77,12 @@ public class UrlReader {
         return vista;
     }
 
-    static {
-        //for localhost testing only
 
-    }
-
+    /**
+     * Metodo que recive realiza la request hacia el segundo servicio
+     * @param sitetoread la URL a la cual se va a hacer la request
+     * @return la respuesta del request, que contiene una pagina html
+     */
     public static String readURL(String sitetoread) {
         String vista = "";
         try {

@@ -13,6 +13,10 @@ import static spark.Spark.get;
  */
 public class OtherSparkService
 {
+    /**
+     * Funcion main que crea un servicio REST en spark
+     * @param args parammetros de funcion main en java
+     */
     public static void main(String[] args) {
         port(getPort());
         secure("keystores/ecikeystore.p12", "areplab7", "keystores/myTrustStore", "areplab7");
@@ -20,6 +24,12 @@ public class OtherSparkService
 
     }
 
+    /**
+     * Metodo que retonra la pagina de home en fromato string
+     * @param req request hecha por el usuario
+     * @param res response dada al usuario
+     * @return pagina html en formato string
+     */
     private static String HomePage(Request req, Response res) {
         String pageContent
                 = "<!DOCTYPE html>"

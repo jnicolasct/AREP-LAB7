@@ -18,6 +18,11 @@ public class SecureSparkServicesApp {
     private static Map<String, String> userPasswords = new HashMap<>();
     private static boolean firtLoggin = true;
 
+    /**
+     * Funcion main que crea un servicio REST en spark
+     * @param args parammetros de funcion main en java
+     */
+
     public static void main(String[] args) {
         port(getPort());
         secure("SparkSecure/keystores/ecikeystore.p12", "areplab7", "SparkSecure/keystores/myTrustStore", "areplab7");
@@ -46,6 +51,12 @@ public class SecureSparkServicesApp {
 
     }
 
+    /**
+     * Metodo que retonra la pagina de login en fromato string
+     * @param req request hecha por el usuario
+     * @param res response dada al usuario
+     * @return pagina html en formato string
+     */
     private static String LoginPage(Request req, Response res) {
         String pageContent
                 = "<!DOCTYPE html>"
@@ -79,6 +90,12 @@ public class SecureSparkServicesApp {
         return pageContent;
     }
 
+    /**
+     * Metodo que hace el request hacia el segundo servicio alojado segunda maquina virtual en AWS
+     * @param req request hecha por el usuario
+     * @param res response dada al usuario
+     * @return un string con la pagina que contiene el segundo servicio
+     */
     private static String HomePage(Request req, Response res) {
         String home = "";
         try {
